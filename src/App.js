@@ -1,22 +1,22 @@
+import React from "react";
 import { useState } from "react";
+import NewApp from "./NewApp";
+
 function App(){
-  const [sum, setSum] = useState(0);
+  const [one, setOne] = useState(1);
   function plus(){
-    setSum(sum + 1)
+    setOne(one + 1)
   }
   function minus(){
-    setSum(sum > 0 ? sum - 1 : 0)
+    setOne(one > 0 ? one - 1 : 0)
   }
   function sbros(){
-    setSum(0)
+    setOne(0)
   }
   return(
     <div>
-      <h2>{sum}</h2>
-    <button onClick={plus}>+</button>
-    <button onClick={minus}>-</button>
-    <button onClick={sbros}>Сброс</button>
+      <NewApp one = {one} plus = {plus} minus = {minus} sbros = {sbros}/>
     </div>
   )
-};
+}
 export default App;
