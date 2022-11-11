@@ -1,12 +1,13 @@
+import { useState } from "react";
 import Buttons from "./Buttons";
 import Number from "./Number";
 
-
-function Main(props){
+function Main(){
+  const [num, setNum] = useState(0);
   return(
     <div className="main">
-      <Number num = {props.num}/>
-      <Buttons increment = {props.increment} decrement = {props.decrement} reset = {props.reset}/>
+      <Number num = {num}/>
+      <Buttons num = {num} setNum = {setNum}/>
     </div>
   )
 }

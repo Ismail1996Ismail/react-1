@@ -1,7 +1,7 @@
-function Number(props){
+function Number({num}){
   return(
     <h2 className="number">
-      {props.num}
+      {num}
     </h2>
   )
 }
